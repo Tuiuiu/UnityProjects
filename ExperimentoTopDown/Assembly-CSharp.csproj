@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\LevelControlelrs\ScoreController.cs" />
     <Compile Include="Assets\Scripts\LevelControlelrs\SpawnController.cs" />
     <Compile Include="Assets\Scripts\Misc\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Misc\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Weapons\Projectile.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

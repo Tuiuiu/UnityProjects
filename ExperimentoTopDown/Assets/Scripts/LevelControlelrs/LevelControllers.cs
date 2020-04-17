@@ -35,6 +35,10 @@ public class LevelControllers : MonoBehaviour
         score.AddScore(enemyRewards[0]);
         loot.DropLoot(enemyRewards[1], position);
         enemyCount--;
+        if (enemyCount == 0)
+        {
+            FinishLevel();
+        }
     }
 
     // Spawn enemies in the Level
@@ -54,5 +58,10 @@ public class LevelControllers : MonoBehaviour
     {
         spawn.Summon(position);
         enemyCount++;
+    }
+
+    private void FinishLevel()
+    {
+        Debug.Log("Naisu!");
     }
 }

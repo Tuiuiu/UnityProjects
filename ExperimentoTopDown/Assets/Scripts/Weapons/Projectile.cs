@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
 {
     private Vector2 direction = Vector2.right;
     private Rigidbody2D body;
-    private float damage = 5.0f;
+    private int damage = 5;
     private float speed = 20.0f;
     // Start is called before the first frame update
     void Start()
@@ -33,7 +33,7 @@ public class Projectile : MonoBehaviour
         speed = newSpd;
     }
 
-    public void setDamage(float newDmg)
+    public void setDamage(int newDmg)
     {
         damage = newDmg;
     }

@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     private float autoRate = 1.0f;
     private float autoNext = 0f;
 
-    private float shootDamage = 5;
+    private int shootDamage = 3;
 
     private bool mouseControl = true;
 

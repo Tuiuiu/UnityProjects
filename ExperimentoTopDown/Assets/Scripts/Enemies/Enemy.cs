@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float life = 10.0f;
+    public int life = 10;
     private float speed = 5.0f;
 
     private int score = 100;
@@ -13,10 +13,12 @@ public class Enemy : MonoBehaviour
     public GameObject target;
     public LevelControllers level;
     private Rigidbody2D body;
+    public HealthBar healthbar;
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        healthbar.SetMaxHealth(life);
     }
 
     // Update is called once per frame
@@ -26,9 +28,10 @@ public class Enemy : MonoBehaviour
         body.velocity = direction.normalized * speed;
     }
 
-    public void takeDamage(float damage)
+    public void takeDamage(int damage)
     {
         life -= damage;
+        healthbar.SetHealth(life);
         if (life <= 0)
         {
             Die();
