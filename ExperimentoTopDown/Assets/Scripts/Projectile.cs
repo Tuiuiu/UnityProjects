@@ -37,5 +37,16 @@ public class Projectile : MonoBehaviour
     {
         damage = newDmg;
     }
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("ENTROU");
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+            enemy.takeDamage(damage);
+            Destroy(gameObject);
+        }
+    }
 }
 
