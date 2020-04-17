@@ -60,11 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\CameraController.cs" />
-    <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\Projectile.cs" />
-    <Compile Include="Assets\Scripts\SpawnController.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Enemy.cs" />
+    <Compile Include="Assets\Scripts\LevelControlelrs\LevelControllers.cs" />
+    <Compile Include="Assets\Scripts\LevelControlelrs\LootController.cs" />
+    <Compile Include="Assets\Scripts\LevelControlelrs\ScoreController.cs" />
+    <Compile Include="Assets\Scripts\LevelControlelrs\SpawnController.cs" />
+    <Compile Include="Assets\Scripts\Misc\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Projectile.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/garot/Desktop/UnityProjects/ExperimentoTopDown/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
