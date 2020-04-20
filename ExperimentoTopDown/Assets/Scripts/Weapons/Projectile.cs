@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    private Vector2 direction = Vector2.right;
-    private Rigidbody2D body;
-    private int damage = 5;
-    private float speed = 20.0f;
+    protected Vector2 direction = Vector2.right;
+    protected Rigidbody2D body;
+    protected int damage = 5;
+    protected float speed = 20.0f;
+
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         body = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         body.velocity = direction * speed;
 
@@ -44,9 +45,13 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
-            enemy.takeDamage(damage);
-            Destroy(gameObject);
+            OnHitConfirmed(enemy);
         }
+    }
+
+    protected virtual void OnHitConfirmed(Enemy enemy)
+    {
+        Debug.Log("Projectile hit an enemy");
     }
 }
 

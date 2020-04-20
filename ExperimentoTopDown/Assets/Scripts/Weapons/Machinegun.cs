@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Machinegun : MonoBehaviour
 {
-    public GameObject[] projectiles;
+    public GameObject projectile;
     public GameObject player;
     private Player playerComponent;
 
@@ -47,7 +47,7 @@ public class Machinegun : MonoBehaviour
         Vector2 shootDirection = shootDir.normalized;
         Vector2 weaponPosition = new Vector2(transform.position.x, transform.position.y);
 
-        Projectile clone = Instantiate(projectiles[0], weaponPosition + shootDirection, transform.rotation).GetComponent<Projectile>();
+        Projectile clone = Instantiate(projectile, weaponPosition + shootDirection, transform.rotation).GetComponent<Projectile>();
         // Projectile projectile = clone.GetComponent<Projectile>();
         clone.setDirection(shootDirection);
         clone.setDamage(shootDamage);
