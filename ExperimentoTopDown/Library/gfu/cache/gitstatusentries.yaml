@@ -13,12 +13,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-04-17T20:00:06.251-03:00
-  initializedAtString: 2020-04-17T17:26:29.517-03:00
+  lastUpdatedAtString: 2020-04-20T17:40:46.964-03:00
+  initializedAtString: 2020-04-20T17:15:11.149-03:00
   entries:
   - path: ExperimentoTopDown\.vs\ExperimentoTopDown\v15\.suo
     fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\.vs\ExperimentoTopDown\v15\.suo
     projectPath: .vs\ExperimentoTopDown\v15\.suo
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ExperimentoTopDown\.vs\ExperimentoTopDown\v15\Server\sqlite3\storage.ide
+    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\.vs\ExperimentoTopDown\v15\Server\sqlite3\storage.ide
+    projectPath: .vs\ExperimentoTopDown\v15\Server\sqlite3\storage.ide
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ExperimentoTopDown\.vs\ExperimentoTopDown\v15\Server\sqlite3\storage.ide-shm
+    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\.vs\ExperimentoTopDown\v15\Server\sqlite3\storage.ide-shm
+    projectPath: .vs\ExperimentoTopDown\v15\Server\sqlite3\storage.ide-shm
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -34,69 +46,51 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: ExperimentoTopDown\Assets\Prefabs\Enemies\Enemy.prefab
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Prefabs\Enemies\Enemy.prefab
-    projectPath: Assets\Prefabs\Enemies\Enemy.prefab
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: ExperimentoTopDown\Assets\Prefabs\Weapons\Projectile.prefab
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Prefabs\Weapons\Projectile.prefab
-    projectPath: Assets\Prefabs\Weapons\Projectile.prefab
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: ExperimentoTopDown\Assets\Scenes\SampleScene.unity
     fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scenes\SampleScene.unity
     projectPath: Assets\Scenes\SampleScene.unity
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: ExperimentoTopDown\Assets\Scripts\Enemies\Enemy.cs
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Enemies\Enemy.cs
-    projectPath: Assets\Scripts\Enemies\Enemy.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: ExperimentoTopDown\Assets\Scripts\LevelControlelrs\LevelControllers.cs
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\LevelControlelrs\LevelControllers.cs
-    projectPath: Assets\Scripts\LevelControlelrs\LevelControllers.cs
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: ExperimentoTopDown\Assets\Scripts\Misc\HealthBar.cs
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Misc\HealthBar.cs
-    projectPath: Assets\Scripts\Misc\HealthBar.cs
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: ExperimentoTopDown\Assets\Scripts\Misc\HealthBar.cs.meta
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Misc\HealthBar.cs.meta
-    projectPath: Assets\Scripts\Misc\HealthBar.cs.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: ExperimentoTopDown\Assets\Scripts\Player\Player.cs
     fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Player\Player.cs
     projectPath: Assets\Scripts\Player\Player.cs
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: ExperimentoTopDown\Assets\Scripts\Weapons\Projectile.cs
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Weapons\Projectile.cs
-    projectPath: Assets\Scripts\Weapons\Projectile.cs
+  - path: ExperimentoTopDown\Assets\Scripts\Weapons\Machinegun.cs
+    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Weapons\Machinegun.cs
+    projectPath: Assets\Scripts\Weapons\Machinegun.cs
     originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: ExperimentoTopDown\Assets\Scripts\Weapons\Machinegun.cs.meta
+    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Weapons\Machinegun.cs.meta
+    projectPath: Assets\Scripts\Weapons\Machinegun.cs.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: ExperimentoTopDown\Library\assetDatabase3
     fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\assetDatabase3
     projectPath: Library\assetDatabase3
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: ExperimentoTopDown\Library\gfu\cache\gitlocks.yaml
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\gfu\cache\gitlocks.yaml
-    projectPath: Library\gfu\cache\gitlocks.yaml
+  - path: ExperimentoTopDown\Library\CurrentLayout.dwlt
+    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\CurrentLayout.dwlt
+    projectPath: Library\CurrentLayout.dwlt
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ExperimentoTopDown\Library\EditorInstance.json
+    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\EditorInstance.json
+    projectPath: Library\EditorInstance.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: ExperimentoTopDown\Library\expandedItems
+    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\expandedItems
+    projectPath: Library\expandedItems
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
@@ -124,27 +118,15 @@ MonoBehaviour:
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: ExperimentoTopDown\Library\InspectorExpandedItems.asset
+    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\InspectorExpandedItems.asset
+    projectPath: Library\InspectorExpandedItems.asset
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: ExperimentoTopDown\Library\metadata\17\17df71d4c1abdff4398aaaaf5edc6279
     fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\metadata\17\17df71d4c1abdff4398aaaaf5edc6279
     projectPath: Library\metadata\17\17df71d4c1abdff4398aaaaf5edc6279
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: ExperimentoTopDown\Library\metadata\76\76435d7d04c91454696706362a9a06f4
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\metadata\76\76435d7d04c91454696706362a9a06f4
-    projectPath: Library\metadata\76\76435d7d04c91454696706362a9a06f4
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: ExperimentoTopDown\Library\metadata\7f\7f5436d02be7b0147a0aa14b80c4f34e
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\metadata\7f\7f5436d02be7b0147a0aa14b80c4f34e
-    projectPath: Library\metadata\7f\7f5436d02be7b0147a0aa14b80c4f34e
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: ExperimentoTopDown\Library\metadata\7f\7f99392ae0940b74285906b579a47420
-    fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\metadata\7f\7f99392ae0940b74285906b579a47420
-    projectPath: Library\metadata\7f\7f99392ae0940b74285906b579a47420
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3

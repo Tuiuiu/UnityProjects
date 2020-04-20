@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Misc\CameraController.cs" />
     <Compile Include="Assets\Scripts\Misc\HealthBar.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Weapons\Machinegun.cs" />
     <Compile Include="Assets\Scripts\Weapons\Projectile.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/garot/Desktop/UnityProjects/ExperimentoTopDown/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

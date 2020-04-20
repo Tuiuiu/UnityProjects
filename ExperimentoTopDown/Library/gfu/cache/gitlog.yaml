@@ -13,9 +13,195 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2020-04-17T20:00:06.589-03:00
-  initializedAtString: 2020-04-17T17:26:34.580-03:00
+  lastUpdatedAtString: 2020-04-20T17:40:13.221-03:00
+  initializedAtString: 2020-04-20T17:15:19.120-03:00
   log:
+  - commitID: 6ab8bed418d0680e3faf9586cc6a5894b098b63f
+    mergeA: 
+    mergeB: 
+    authorName: Tuiuiu
+    authorEmail: lucasdario.dariolucas@gmail.com
+    commitEmail: lucasdario.dariolucas@gmail.com
+    commitName: Tuiuiu
+    summary: Add healthbars to enemies
+    description: 
+    timeString: 2020-04-17T20:08:32.000-03:00
+    commitTimeString: 2020-04-17T20:08:32.000-03:00
+    changes:
+    - path: ExperimentoTopDown\.vs\ExperimentoTopDown\v15\.suo
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\.vs\ExperimentoTopDown\v15\.suo
+      projectPath: .vs\ExperimentoTopDown\v15\.suo
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\.vs\ExperimentoTopDown\v15\Server\sqlite3\storage.ide-wal
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\.vs\ExperimentoTopDown\v15\Server\sqlite3\storage.ide-wal
+      projectPath: .vs\ExperimentoTopDown\v15\Server\sqlite3\storage.ide-wal
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assembly-CSharp.csproj
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assembly-CSharp.csproj
+      projectPath: Assembly-CSharp.csproj
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assets\Prefabs\Enemies\Enemy.prefab
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Prefabs\Enemies\Enemy.prefab
+      projectPath: Assets\Prefabs\Enemies\Enemy.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assets\Prefabs\Weapons\Projectile.prefab
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Prefabs\Weapons\Projectile.prefab
+      projectPath: Assets\Prefabs\Weapons\Projectile.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assets\Scenes\SampleScene.unity
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scenes\SampleScene.unity
+      projectPath: Assets\Scenes\SampleScene.unity
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assets\Scripts\Enemies\Enemy.cs
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Enemies\Enemy.cs
+      projectPath: Assets\Scripts\Enemies\Enemy.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assets\Scripts\LevelControlelrs\LevelControllers.cs
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\LevelControlelrs\LevelControllers.cs
+      projectPath: Assets\Scripts\LevelControlelrs\LevelControllers.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assets\Scripts\Misc\HealthBar.cs
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Misc\HealthBar.cs
+      projectPath: Assets\Scripts\Misc\HealthBar.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assets\Scripts\Misc\HealthBar.cs.meta
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Misc\HealthBar.cs.meta
+      projectPath: Assets\Scripts\Misc\HealthBar.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assets\Scripts\Player\Player.cs
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Player\Player.cs
+      projectPath: Assets\Scripts\Player\Player.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Assets\Scripts\Weapons\Projectile.cs
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Assets\Scripts\Weapons\Projectile.cs
+      projectPath: Assets\Scripts\Weapons\Projectile.cs
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\ScriptAssemblies\Assembly-CSharp.dll
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\ScriptAssemblies\Assembly-CSharp.dll
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\ScriptAssemblies\Assembly-CSharp.pdb
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\ScriptAssemblies\Assembly-CSharp.pdb
+      projectPath: Library\ScriptAssemblies\Assembly-CSharp.pdb
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\StateCache\Hierarchy\d23ba7-mainStage.json
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\StateCache\Hierarchy\d23ba7-mainStage.json
+      projectPath: Library\StateCache\Hierarchy\d23ba7-mainStage.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\StateCache\SceneView\60da95-mainStage.json
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\StateCache\SceneView\60da95-mainStage.json
+      projectPath: Library\StateCache\SceneView\60da95-mainStage.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\assetDatabase3
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\assetDatabase3
+      projectPath: Library\assetDatabase3
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\gfu\cache\gitlocks.yaml
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\gfu\cache\gitlocks.yaml
+      projectPath: Library\gfu\cache\gitlocks.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\gfu\cache\gitlog.yaml
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\gfu\cache\gitlog.yaml
+      projectPath: Library\gfu\cache\gitlog.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\gfu\cache\gitstatusentries.yaml
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\gfu\cache\gitstatusentries.yaml
+      projectPath: Library\gfu\cache\gitstatusentries.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\gfu\cache\gittrackingstatus.yaml
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\gfu\cache\gittrackingstatus.yaml
+      projectPath: Library\gfu\cache\gittrackingstatus.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\gfu\cache\repoinfo.yaml
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\gfu\cache\repoinfo.yaml
+      projectPath: Library\gfu\cache\repoinfo.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\metadata\17\17df71d4c1abdff4398aaaaf5edc6279
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\metadata\17\17df71d4c1abdff4398aaaaf5edc6279
+      projectPath: Library\metadata\17\17df71d4c1abdff4398aaaaf5edc6279
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\metadata\76\76435d7d04c91454696706362a9a06f4
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\metadata\76\76435d7d04c91454696706362a9a06f4
+      projectPath: Library\metadata\76\76435d7d04c91454696706362a9a06f4
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\metadata\7f\7f5436d02be7b0147a0aa14b80c4f34e
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\metadata\7f\7f5436d02be7b0147a0aa14b80c4f34e
+      projectPath: Library\metadata\7f\7f5436d02be7b0147a0aa14b80c4f34e
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\metadata\7f\7f99392ae0940b74285906b579a47420
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\metadata\7f\7f99392ae0940b74285906b579a47420
+      projectPath: Library\metadata\7f\7f99392ae0940b74285906b579a47420
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Library\shadercompiler-UnityShaderCompiler.exe0.log
+      projectPath: Library\shadercompiler-UnityShaderCompiler.exe0.log
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\Temp\__Backupscenes\0.backup
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\Temp\__Backupscenes\0.backup
+      projectPath: Temp\__Backupscenes\0.backup
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: ExperimentoTopDown\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+      fullPath: C:\Users\garot\Desktop\UnityProjects\ExperimentoTopDown\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+      projectPath: obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
   - commitID: 4defb3d55c8de63bcad8db23e6d160e6894b05c0
     mergeA: 
     mergeB: 
