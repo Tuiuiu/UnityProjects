@@ -46,7 +46,10 @@ public class Player : MonoBehaviour
                 lastShootDirection = shootDirection;
             }
         }
-        
+
+        Vector2 perpendicular = Vector2.Perpendicular(shootDirection);
+        transform.right = -perpendicular;
+
         // Move player
         body.velocity = direction.normalized * movementSpeed;
     }
