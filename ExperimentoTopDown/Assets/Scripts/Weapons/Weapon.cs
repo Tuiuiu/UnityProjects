@@ -18,6 +18,7 @@ public struct ShotEffect
     public int value;
     public float duration;
 
+    // Struct constructor
     public ShotEffect(EffectType eff, int val, float dur)
     {
         type = eff;
@@ -77,11 +78,11 @@ public class Weapon : MonoBehaviour
         }
     }
 
+    //  Instantiate a projectile, directed to aim direction, carrying weapon damage and effects properties via reference
     private void Shoot(Vector2 shootDir)
     {
         Vector2 shootDirection = shootDir.normalized;
         Vector2 weaponPosition = new Vector2(transform.position.x, transform.position.y);
-
         Projectile clone = Instantiate(projectile, weaponPosition + shootDirection, transform.rotation).GetComponent<Projectile>();
         clone.setDirection(shootDirection);
         clone.setWeapon(this);
