@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Rocket : Projectile
 {
-    private int explosionDamage = 3;
-
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -28,12 +26,14 @@ public class Rocket : Projectile
         // Check for enemies hit by explosion
         Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(transform.position, 1.5f);
         
-        // Explosion deals damage to each enemy affected by it
+        // Explosion deals secondary effects to each enemy affected by it, including explosion damage
         foreach (Collider2D enm in enemiesHit)
         {
             if (enm.gameObject.CompareTag("Enemy"))
             {
-                enm.GetComponent<Enemy>().takeDamage(explosionDamage);
+                Enemy collateralTarget = enm.GetComponent<Enemy>();
+                foreach (ShotEffect eff in weapon.secondaryEffects)
+                    collateralTarget.resolveEffect(eff);
             }
         }
         // Destroy rocket object

@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
         level.EnemyKilled(transform.position, rewards);
         Destroy(gameObject);
     }
-
+    
     public void setTarget(GameObject targetReference)
     {
         target = targetReference;
@@ -55,13 +55,13 @@ public class Enemy : MonoBehaviour
         level = levelReference;
     }
 
-    public void resolveEffect(Weapon.ShotEffect effect)
+    public void resolveEffect(ShotEffect effect)
     {
-        Debug.Log("Dealing with effect " + effect.effectType + " of value " + effect.value + " and duration " + effect.duration);
-        switch (effect.effectType)
+        Debug.Log("Dealing with effect " + effect.type + " of value " + effect.value + " and duration " + effect.duration);
+        switch (effect.type)
         {
-            case WeaponEffect.PhysicalDamage:
-            case WeaponEffect.ExplosionDamage:
+            case EffectType.PhysicalDamage:
+            case EffectType.ExplosionDamage:
                 takeDamage(effect.value);
                 break;
             default:

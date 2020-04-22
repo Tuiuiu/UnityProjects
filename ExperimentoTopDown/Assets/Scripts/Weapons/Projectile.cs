@@ -52,7 +52,7 @@ public class Projectile : MonoBehaviour
 
     protected virtual void OnHitConfirmed(Enemy enemy)
     {
-        foreach (Weapon.ShotEffect eff in weapon.effects)
+        foreach (ShotEffect eff in weapon.effects)
         {
             enemy.resolveEffect(eff);
         }

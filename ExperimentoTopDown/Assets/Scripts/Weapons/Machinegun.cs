@@ -8,7 +8,7 @@ public class Machinegun : Weapon
     protected override void Start()
     {
         fireDelay = 1.0f;
-        effects.Add(new ShotEffect(WeaponEffect.PhysicalDamage, 3, -1));
+        effects.Add(new ShotEffect(EffectType.PhysicalDamage, 3, -1));
         base.Start();
     }
 

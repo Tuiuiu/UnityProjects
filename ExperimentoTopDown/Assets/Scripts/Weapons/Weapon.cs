@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum WeaponEffect
+public enum EffectType
 {
     ExplosionDamage,
     PhysicalDamage,
@@ -10,23 +10,25 @@ public enum WeaponEffect
     Burn
 }
 
+// Defines a possible effect caused by a projectile, that's present
+// on a weapon
+public struct ShotEffect
+{
+    public EffectType type;
+    public int value;
+    public float duration;
+
+    public ShotEffect(EffectType eff, int val, float dur)
+    {
+        type = eff;
+        value = val;
+        duration = dur;
+    }
+}
+
+
 public class Weapon : MonoBehaviour
 {
-    // Defines a possible effect caused by the projectile
-    public struct ShotEffect
-    {
-        public WeaponEffect effectType;
-        public int value;
-        public float duration;
-
-        public ShotEffect(WeaponEffect eff, int val, float dur)
-        {
-            effectType = eff;
-            value = val;
-            duration = dur;
-        }
-    }
-
     // Player reference
     private GameObject player;
     private Player playerComponent;
@@ -39,6 +41,7 @@ public class Weapon : MonoBehaviour
     protected float fireDelay = 1.0f;
     protected int shootDamage = 3;
     public List<ShotEffect> effects = new List<ShotEffect>();
+    public List<ShotEffect> secondaryEffects = new List<ShotEffect>();
 
 
     // Start is called before the first frame update

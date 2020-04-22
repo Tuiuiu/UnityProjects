@@ -8,7 +8,8 @@ public class RocketLauncher : Weapon
     protected override void Start()
     {
         fireDelay = 3.0f;
-        effects.Add(new ShotEffect(WeaponEffect.PhysicalDamage, 5, -1));
+        effects.Add(new ShotEffect(EffectType.PhysicalDamage, 5, -1));
+        secondaryEffects.Add(new ShotEffect(EffectType.ExplosionDamage, 3, -1));
         base.Start();
     }
     
