@@ -2,8 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum WeaponEffect
+{
+    ExplosionDamage,
+    PhysicalDamage,
+    Freeze,
+    Burn
+}
+
 public class Weapon : MonoBehaviour
 {
+    // Defines a possible effect caused by the projectile
+    public struct ShotEffect
+    {
+        public WeaponEffect effectType;
+        public int value;
+        public float duration;
+
+        public ShotEffect(WeaponEffect eff, int val, float dur)
+        {
+            effectType = eff;
+            value = val;
+            duration = dur;
+        }
+    }
+
     // Player reference
     private GameObject player;
     private Player playerComponent;
@@ -15,8 +38,11 @@ public class Weapon : MonoBehaviour
     private float nextShot = 0f;
     protected float fireDelay = 1.0f;
     protected int shootDamage = 3;
+    public List<ShotEffect> effects = new List<ShotEffect>();
+
 
     // Start is called before the first frame update
+    // Set autofire and get Player reference
     protected virtual void Start()
     {
         nextShot = fireDelay;
@@ -55,7 +81,7 @@ public class Weapon : MonoBehaviour
 
         Projectile clone = Instantiate(projectile, weaponPosition + shootDirection, transform.rotation).GetComponent<Projectile>();
         clone.setDirection(shootDirection);
-        clone.setDamage(shootDamage);
+        clone.setWeapon(this);
         nextShot = fireDelay;
     }
 

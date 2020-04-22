@@ -23,7 +23,7 @@ public class Rocket : Projectile
     {
         Debug.Log("Rocket hit an enemy!!");
         // Hit Damage
-        enemy.takeDamage(damage);
+        base.OnHitConfirmed(enemy);
 
         // Check for enemies hit by explosion
         Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(transform.position, 1.5f);

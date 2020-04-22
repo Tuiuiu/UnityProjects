@@ -6,8 +6,9 @@ public class Projectile : MonoBehaviour
 {
     protected Vector2 direction = Vector2.right;
     protected Rigidbody2D body;
-    protected int damage = 5;
     protected float speed = 20.0f;
+
+    protected Weapon weapon;
 
     // Start is called before the first frame update
     protected virtual void Start()
@@ -34,9 +35,9 @@ public class Projectile : MonoBehaviour
         speed = newSpd;
     }
 
-    public void setDamage(int newDmg)
+    public void setWeapon(Weapon newWeapon)
     {
-        damage = newDmg;
+        weapon = newWeapon;
     }
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -51,6 +52,10 @@ public class Projectile : MonoBehaviour
 
     protected virtual void OnHitConfirmed(Enemy enemy)
     {
+        foreach (Weapon.ShotEffect eff in weapon.effects)
+        {
+            enemy.resolveEffect(eff);
+        }
         Debug.Log("Projectile hit an enemy");
     }
 }

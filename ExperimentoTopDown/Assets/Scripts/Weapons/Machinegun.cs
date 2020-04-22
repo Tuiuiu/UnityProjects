@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Machinegun : Weapon
 {
-    // Start is called before the first frame update
+    // Set weapon properties, then call base Start
     protected override void Start()
     {
         fireDelay = 1.0f;
-        shootDamage = 3;
+        effects.Add(new ShotEffect(WeaponEffect.PhysicalDamage, 3, -1));
         base.Start();
     }
 

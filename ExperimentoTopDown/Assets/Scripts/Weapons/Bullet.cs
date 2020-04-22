@@ -18,8 +18,8 @@ public class Bullet : Projectile
 
     protected override void OnHitConfirmed(Enemy enemy)
     {
+        base.OnHitConfirmed(enemy);
         Debug.Log("Bullet hit an enemy!!");
-        enemy.takeDamage(damage);
         Destroy(gameObject);
     }
 }

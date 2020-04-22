@@ -54,4 +54,19 @@ public class Enemy : MonoBehaviour
     {
         level = levelReference;
     }
+
+    public void resolveEffect(Weapon.ShotEffect effect)
+    {
+        Debug.Log("Dealing with effect " + effect.effectType + " of value " + effect.value + " and duration " + effect.duration);
+        switch (effect.effectType)
+        {
+            case WeaponEffect.PhysicalDamage:
+            case WeaponEffect.ExplosionDamage:
+                takeDamage(effect.value);
+                break;
+            default:
+                Debug.Log("Default case! Your effect went wrong");
+                break;
+        }
+    }
 }
