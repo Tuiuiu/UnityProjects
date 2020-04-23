@@ -7,6 +7,7 @@ public class Bullet : Projectile
     // Start is called before the first frame update
     protected override void Start()
     {
+        speed = 40.0f;
         base.Start();
     }
 

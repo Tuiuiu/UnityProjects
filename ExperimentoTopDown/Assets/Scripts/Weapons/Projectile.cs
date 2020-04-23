@@ -21,7 +21,7 @@ public class Projectile : MonoBehaviour
     {
         body.velocity = direction * speed;
 
-        if (transform.position.x > 22 || transform.position.x < -22 || transform.position.y > 12 || transform.position.y < -12)
+        if (transform.position.x > 42 || transform.position.x < -42 || transform.position.y > 32 || transform.position.y < -32)
             Destroy(gameObject);
     }
 

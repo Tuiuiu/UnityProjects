@@ -7,7 +7,7 @@ public class ScoreController : MonoBehaviour
 {
     private int score;
     public Text UIscore;
-    private string scorePreamble = "SCORE: ";
+    private string scorePreamble = "HIGHSCORE: ";
     // Start is called before the first frame update
     void Start()
     {
