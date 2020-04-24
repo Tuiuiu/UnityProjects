@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float movementSpeed = 10.0f;
+    // Player stats
+    private int life;
+    private bool invincible = false;
+    private float invincibilityTime = 0f;
+    // References
     private Rigidbody2D body;
+    // Movement
+    private float movementSpeed = 10.0f;
     private Vector2 direction;
+    // Aiming
     private Vector2 lastShootDirection = Vector2.right;
     private Vector2 shootDirection = new Vector2();
-
     private bool mouseControl = true;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        life = 3;
         body = GetComponent<Rigidbody2D>();
     }
 
@@ -47,6 +55,15 @@ public class Player : MonoBehaviour
             }
         }
 
+        if (invincible)
+        {
+            invincibilityTime -= Time.deltaTime;
+            if (invincibilityTime <= 0)
+            {
+                invincible = false;
+            }
+        }
+
         Vector2 perpendicular = Vector2.Perpendicular(shootDirection);
         transform.right = -perpendicular;
 
@@ -57,5 +74,34 @@ public class Player : MonoBehaviour
     public Vector2 getShootDirection()
     {
         return shootDirection;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            if (!invincible)
+            {
+                TakeDamage();
+                invincible = true;
+                invincibilityTime = 3.0f;
+            }
+
+        }
+    }
+
+    private void TakeDamage()
+    {
+        life -= 1;
+        Debug.Log("VIDA: " + life);
+        if (life <= 0)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        Debug.Log("MORREU");      
     }
 }
