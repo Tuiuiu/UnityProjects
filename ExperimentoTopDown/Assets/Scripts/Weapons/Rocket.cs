@@ -19,7 +19,6 @@ public class Rocket : Projectile
     // AQUI PRECISA EXPLODIR TUTU
     protected override void OnHitConfirmed(Enemy enemy)
     {
-        Debug.Log("Rocket hit an enemy!!");
         // Hit Damage
         base.OnHitConfirmed(enemy);
 

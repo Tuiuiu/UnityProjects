@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Enum of different types of effects that a shot can have
 public enum EffectType
 {
     ExplosionDamage,
@@ -10,8 +11,8 @@ public enum EffectType
     Burn
 }
 
-// Defines a possible effect caused by a projectile, that's present
-// on a weapon
+// Defines all the stats of a possible effect caused  
+// by a projectile present on a weapon
 public struct ShotEffect
 {
     public EffectType type;

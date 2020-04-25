@@ -10,6 +10,7 @@ public class RocketLauncher : Weapon
         fireDelay = 3.0f;
         effects.Add(new ShotEffect(EffectType.PhysicalDamage, 5, -1));
         secondaryEffects.Add(new ShotEffect(EffectType.ExplosionDamage, 3, -1));
+        secondaryEffects.Add(new ShotEffect(EffectType.Burn, 1, 4));
         base.Start();
     }
     

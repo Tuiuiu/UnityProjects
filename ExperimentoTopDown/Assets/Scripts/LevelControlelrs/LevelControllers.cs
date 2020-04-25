@@ -18,6 +18,7 @@ public class LevelControllers : MonoBehaviour
 
         enemyCount = 0;
         InvokeRepeating("SpawnLevel", 1.0f, 5.0f);
+        //Invoke("SpawnLevel", 1.0f);
     }
 
     // Update is called once per frame

@@ -42,7 +42,6 @@ public class Projectile : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("ENTROU");
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
@@ -56,7 +55,7 @@ public class Projectile : MonoBehaviour
         {
             enemy.resolveEffect(eff);
         }
-        Debug.Log("Projectile hit an enemy");
+        // Debug.Log("Projectile hit an enemy");
     }
 }
 
