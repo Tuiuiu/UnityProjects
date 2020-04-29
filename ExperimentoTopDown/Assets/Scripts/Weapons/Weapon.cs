@@ -8,7 +8,8 @@ public enum EffectType
     ExplosionDamage,
     PhysicalDamage,
     Freeze,
-    Burn
+    Burn,
+    Stun
 }
 
 // Defines all the stats of a possible effect caused  

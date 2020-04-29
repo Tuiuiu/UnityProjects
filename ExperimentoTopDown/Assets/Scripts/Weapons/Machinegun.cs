@@ -9,7 +9,7 @@ public class Machinegun : Weapon
     {
         fireDelay = 1.0f;
         effects.Add(new ShotEffect(EffectType.PhysicalDamage, 3, -1));
-        effects.Add(new ShotEffect(EffectType.Freeze, 50, 4));
+        effects.Add(new ShotEffect(EffectType.Stun, -1, 2));
         base.Start();
     }
 

@@ -135,6 +135,13 @@ public class Enemy : MonoBehaviour
                     }
                 }
                 break;
+            case EffectType.Stun:
+                if (!debuffs.ContainsKey(effect.type))
+                {
+                    debuffs.Add(effect.type, new EffectTimer(effect.value, effect.duration, effect.duration));
+                    stunned = true;
+                }
+                break;
             default:
                 Debug.Log("Default case! Your effect went wrong");
                 break;
@@ -158,7 +165,7 @@ public class Enemy : MonoBehaviour
                     // Decrement burn total duration, and deal fire damage
                     // Reset the 2 seconds timer
                     // When duration expires, burning effect goes off
-                    case (EffectType.Burn):
+                    case EffectType.Burn:
                         effectTimer.timer = 1;
                         effectTimer.duration -= 1;
                         takeDamage(effectTimer.value);
@@ -169,8 +176,12 @@ public class Enemy : MonoBehaviour
                         break;
                     // Timer equals it's duration on freeze, so when timer goes off, 
                     // the debuff expires
-                    case (EffectType.Freeze):
+                    case EffectType.Freeze:
                         speedModifier += effectTimer.value;
+                        toBeRemoved.Add(entry.Key);
+                        break;
+                    case EffectType.Stun:
+                        stunned = false;
                         toBeRemoved.Add(entry.Key);
                         break;
                 }
