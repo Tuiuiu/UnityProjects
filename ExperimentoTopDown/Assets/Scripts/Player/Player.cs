@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private float invincibilityTime = 0f;
     // References
     private Rigidbody2D body;
+    public LevelControllers level;
     // Movement
     private float movementSpeed = 10.0f;
     private Vector2 direction;
@@ -19,11 +20,13 @@ public class Player : MonoBehaviour
     private bool mouseControl = true;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
         life = 3;
         body = GetComponent<Rigidbody2D>();
+        level = GameObject.Find("LevelControllers").GetComponent<LevelControllers>();
     }
 
     // Update is called once per frame
@@ -87,6 +90,11 @@ public class Player : MonoBehaviour
                 invincibilityTime = 3.0f;
             }
 
+        }
+
+        else if (collision.CompareTag("Nanobot")) 
+        {
+            level.AddNanobot();
         }
     }
 

@@ -16,8 +16,7 @@ public class LevelControllers : MonoBehaviour
         score = transform.Find("ScoreController").GetComponent<ScoreController>();
         loot = transform.Find("LootController").GetComponent<LootController>();
 
-        enemyCount = 0;
-        InvokeRepeating("SpawnLevel", 1.0f, 5.0f);
+        StartLevel();
         //Invoke("SpawnLevel", 1.0f);
     }
 
@@ -31,7 +30,7 @@ public class LevelControllers : MonoBehaviour
     // It will request other controllers (Score and Loot) to give
     // the corespondet rewards based on the properties of the
     // killed enemy
-    public void EnemyKilled (Vector2 position, int[] enemyRewards)
+    public void EnemyKilled (Vector3 position, int[] enemyRewards)
     {
         score.AddScore(enemyRewards[0]);
         loot.DropLoot(enemyRewards[1], position);
@@ -40,6 +39,12 @@ public class LevelControllers : MonoBehaviour
         {
             FinishLevel();
         }
+    }
+
+    private void StartLevel()
+    {
+        enemyCount = 0;
+        InvokeRepeating("SpawnLevel", 1.0f, 5.0f);
     }
 
     // Spawn enemies in the Level
@@ -64,5 +69,10 @@ public class LevelControllers : MonoBehaviour
     private void FinishLevel()
     {
         Debug.Log("Naisu!");
+    }
+
+    public void AddNanobot()
+    {
+        score.AddNanobot();
     }
 }
