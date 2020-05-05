@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     private Vector2 shootDirection = new Vector2();
     private bool mouseControl = true;
 
+    // Store variables
+    private bool closeToStore = false;
 
 
     // Start is called before the first frame update
@@ -36,28 +38,39 @@ public class Player : MonoBehaviour
         direction.x = Input.GetAxis("Horizontal");
         direction.y = Input.GetAxis("Vertical");
 
-        if (mouseControl)
+        if (!LevelControllers.GameIsPaused)
         {
-            Vector3 aimPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 testDir = aimPoint - transform.position;
-            shootDirection.x = testDir.x;
-            shootDirection.y = testDir.y;
-        }
-
-        else
-        {
-            // Check shooting direction. If it's zero, change to last valid direction
-            shootDirection = direction;
-            if (shootDirection.magnitude < 0.02)
+            if (mouseControl)
             {
-                shootDirection = lastShootDirection;
+                Vector3 aimPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector3 testDir = aimPoint - transform.position;
+                shootDirection.x = testDir.x;
+                shootDirection.y = testDir.y;
             }
+
             else
             {
-                lastShootDirection = shootDirection;
+                // Check shooting direction. If it's zero, change to last valid direction
+                shootDirection = direction;
+                if (shootDirection.magnitude < 0.02)
+                {
+                    shootDirection = lastShootDirection;
+                }
+                else
+                {
+                    lastShootDirection = shootDirection;
+                }
+            }
+
+            if (Input.GetButtonDown("Interact") && closeToStore)
+            {
+                level.OpenWorkshop();
             }
         }
 
+
+
+        // Invincibility timer
         if (invincible)
         {
             invincibilityTime -= Time.deltaTime;
@@ -89,12 +102,24 @@ public class Player : MonoBehaviour
                 invincible = true;
                 invincibilityTime = 3.0f;
             }
-
         }
 
         else if (collision.CompareTag("Nanobot")) 
         {
             level.AddNanobot();
+        }
+
+        else if (collision.CompareTag("ShopInteract"))
+        {
+            closeToStore = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("ShopInteract"))
+        {
+            closeToStore = false;
         }
     }
 

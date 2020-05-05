@@ -7,7 +7,10 @@ public class LevelControllers : MonoBehaviour
     public SpawnController spawn;
     public ScoreController score;
     public LootController loot;
+    public GameObject UIObject;
 
+    public static bool GameIsPaused;
+    public static int pauseCount;
     private int enemyCount;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +18,9 @@ public class LevelControllers : MonoBehaviour
         spawn = transform.Find("EnemySpawner").GetComponent<SpawnController>();
         score = transform.Find("ScoreController").GetComponent<ScoreController>();
         loot = transform.Find("LootController").GetComponent<LootController>();
+        UIObject = GameObject.Find("UI");
+        pauseCount = 0;
+        GameIsPaused = false;
 
         StartLevel();
         //Invoke("SpawnLevel", 1.0f);
@@ -74,5 +80,24 @@ public class LevelControllers : MonoBehaviour
     public void AddNanobot()
     {
         score.AddNanobot();
+    }
+
+    public void OpenWorkshop()
+    {
+        UIObject.GetComponent<WorkshopMenu>().Pause();
+    }
+
+    public static void TimeScaleCheck()
+    {
+        if (pauseCount == 0)
+        {
+            Time.timeScale = 1f;
+            GameIsPaused = false;
+        } 
+        else
+        {
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+        }
     }
 }

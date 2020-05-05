@@ -59,24 +59,27 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
-        // Shoot when fire button is pressed
-        if (Input.GetButtonDown("Fire1"))
+        if (!LevelControllers.GameIsPaused)
         {
-            Shoot(ShootDirection());
-        }
+            // Shoot when fire button is pressed
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot(ShootDirection());
+            }
 
-        // Upgrade fire rate of auto-weapon
-        if (Input.GetButton("Jump"))
-        {
-            upgradeFireRate();
-        }
+            // Upgrade fire rate of auto-weapon
+            if (Input.GetButton("Jump"))
+            {
+                upgradeFireRate();
+            }
 
-        // Update auto-weapon cooldown time, and shoot if possible
-        nextShot -= Time.deltaTime;
+            // Update auto-weapon cooldown time, and shoot if possible
+            nextShot -= Time.deltaTime;
 
-        if (nextShot <= 0f)
-        {
-            Shoot(ShootDirection());
+            if (nextShot <= 0f)
+            {
+                Shoot(ShootDirection());
+            }
         }
     }
 
