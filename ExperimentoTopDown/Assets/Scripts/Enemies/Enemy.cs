@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public enum State
+    {
+        idle,
+        roaming,
+        chasing
+    }
     // Reference Type, so it can be altered when managing debuff dictionary
     private class EffectTimer
     {
@@ -19,6 +25,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    private State state;
     public int life = 10;
     private float speed = 5.0f;
     private float speedModifier = 100;
@@ -37,6 +44,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        state = State.idle;
         body = GetComponent<Rigidbody2D>();
         healthbar.SetMaxHealth(life);
     }
@@ -51,9 +59,16 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-
-            Vector3 direction = target.transform.position - transform.position;
-            body.velocity = direction.normalized * speed * (speedModifier/100);
+            switch(state)
+            {
+                case State.idle:
+                    body.velocity = Vector3.zero;
+                    break;
+                case State.chasing:
+                    Vector3 direction = target.transform.position - transform.position;
+                    body.velocity = direction.normalized * speed * (speedModifier/100);
+                    break;
+            }
         }
     }
 
@@ -194,5 +209,16 @@ public class Enemy : MonoBehaviour
             debuffs.Remove(type);
         }
 
+    }
+
+    public void FoundPlayer(GameObject playerRef)
+    {
+        setTarget(playerRef);
+        state = State.chasing;
+    }
+
+    public void LostPlayer()
+    {
+        state = State.idle;
     }
 }

@@ -45,7 +45,7 @@ public class SpawnController : MonoBehaviour
     {
         GameObject clone = Instantiate(enemies[0], spawnPos, enemies[0].transform.rotation);
         Enemy enemy = clone.GetComponent<Enemy>();
-        enemy.setTarget(player);
+        //enemy.setTarget(player);
         enemy.setLevel(level);
     }
 }
