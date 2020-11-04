@@ -215,6 +215,7 @@ public class Enemy : MonoBehaviour
     {
         setTarget(playerRef);
         state = State.chasing;
+        speed = 5.0f;
     }
 
     public void LostPlayer()
