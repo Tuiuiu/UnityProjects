@@ -7,41 +7,33 @@ public class TowerController : MonoBehaviour
     public GameObject projectilePrefab;
     //public GameObject enemies;
 
-    List<GameObject> targets = new List<GameObject>();
+    protected List<GameObject> targets = new List<GameObject>();
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         //enemies = GameObject.Find("EnemySpawner");
-        InvokeRepeating("ShootAll", 1.0f, 1f);
+        InvokeRepeating("ShootBehaviour", 1.0f, 1f);
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         //Instantiate()
     }
 
-    private void ShootAll()
+    protected virtual void ShootBehaviour()
     {
-        for (int i = targets.Count-1; i >= 0; i--)
-        {
-            if (targets[i] == null) {
-                targets.RemoveAt(i);
-            }
-            else
-            {
-                ShootTarget(targets[i]);
-            }
-        }
+        Debug.Log("Shoot");
     }
 
-    private void ShootTarget(GameObject target)
+    protected void ShootTarget(GameObject target)
     {
         GameObject clone = Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         ProjectileController projectile = clone.GetComponent<ProjectileController>();
         projectile.SetTarget(target);
     }
 
+    // Add new enemies to the list of targets when they enter the tower LoS
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -50,12 +42,12 @@ public class TowerController : MonoBehaviour
         }
     }
 
+    // Remove enemies of the list of targets when they leave the tower LoS
     private void OnTriggerExit2D(Collider2D collision)
     {
-        bool teste;
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            teste = targets.Remove(collision.gameObject);
+            targets.Remove(collision.gameObject);
         }
     }
 }
