@@ -13,7 +13,7 @@ public class EnemySpawnerController : MonoBehaviour
     {
         levelPath = GameObject.Find("Path").GetComponent<PathController>();
         pathWaypoints = levelPath.GetWaypoints();
-        InvokeRepeating("SpawnEnemy", 1.0f, 3.0f);
+        InvokeRepeating("SpawnEnemy", 1.0f, 0.5f);
     }
 
     // Update is called once per frame

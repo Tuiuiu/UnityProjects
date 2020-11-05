@@ -42,7 +42,8 @@ public class ProjectileController : MonoBehaviour
     {
         if(collision.gameObject == target)
         {
-            print("ACERTOU!");
+            EnemyController enemyTgt = target.GetComponent<EnemyController>();
+            enemyTgt.Hit(damage);
             Destroy(gameObject);
         }
     }

@@ -18,6 +18,11 @@ public class EnemyController : MonoBehaviour
         
     }
 
+    public void Hit(int dmg)
+    {
+        TakeDamage(dmg);
+    }
+
     private void TakeDamage(int damage)
     {
         health -= damage;

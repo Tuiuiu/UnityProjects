@@ -26,7 +26,7 @@ public class PathController : MonoBehaviour
     {
         foreach (Transform point in waypoints)
         {
-            print(point);
+            Debug.Log(point);
         }
     }
 
