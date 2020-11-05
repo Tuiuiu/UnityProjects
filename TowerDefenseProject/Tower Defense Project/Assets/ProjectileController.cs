@@ -5,7 +5,7 @@ using UnityEngine;
 public class ProjectileController : MonoBehaviour
 {
     private int damage = 2;
-    public float flightSpeed = 100.0f;
+    public float flightSpeed = 20.0f;
     public GameObject target;
     private Rigidbody2D rb2d;
     // Start is called before the first frame update

@@ -861,12 +861,12 @@ PrefabInstance:
     - target: {fileID: 4004686015404818175, guid: 9e572078470052041ab2677877c5b733,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.99
+      value: -5.15
       objectReference: {fileID: 0}
     - target: {fileID: 4004686015404818175, guid: 9e572078470052041ab2677877c5b733,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.54
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 4004686015404818175, guid: 9e572078470052041ab2677877c5b733,
         type: 3}
@@ -918,6 +918,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower
       objectReference: {fileID: 0}
+    - target: {fileID: 5493944466006928476, guid: 9e572078470052041ab2677877c5b733,
+        type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 2113600569997924468, guid: 13157a39acfb32b4cb5c18df33968f21,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e572078470052041ab2677877c5b733, type: 3}
 --- !u!1001 &7243361114693977712
