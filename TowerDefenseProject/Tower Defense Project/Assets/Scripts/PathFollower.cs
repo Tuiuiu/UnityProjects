@@ -5,8 +5,9 @@ using UnityEngine;
 public class PathFollower : MonoBehaviour
 {
     private List<Transform> waypoints;
-    public float moveSpeed = 5.0f;
     public int currentWaypointIndex = 0;
+    public float baseSpeed = 5.0f;
+    public float speedModifier = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class PathFollower : MonoBehaviour
 
     void Move()
     {
+        float moveSpeed = baseSpeed * speedModifier;
         transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypointIndex].transform.position, moveSpeed * Time.deltaTime);
 
         if (transform.position == waypoints[currentWaypointIndex].transform.position)
@@ -55,5 +57,11 @@ public class PathFollower : MonoBehaviour
     private void ReachEndOfPath()
     {
         Destroy(gameObject);
+    }
+
+    public void ApplyMovementEffect(float mod)
+    {
+        // If positive, gain bonus moveSpeed, if negative, slow moveSpeed
+        speedModifier += mod;
     }
 }

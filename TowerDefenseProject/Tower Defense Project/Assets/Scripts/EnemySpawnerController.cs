@@ -24,7 +24,7 @@ public class EnemySpawnerController : MonoBehaviour
 
     void SpawnEnemy()
     {
-        GameObject clone = Instantiate(enemyPrefab, pathWaypoints[0].transform.position, enemyPrefab.transform.rotation);
+        GameObject clone = Instantiate(enemyPrefab, pathWaypoints[0].transform.position, enemyPrefab.transform.rotation, transform);
         PathFollower clonePath = clone.GetComponent<PathFollower>();
         clonePath.SetPath(pathWaypoints);
     }
