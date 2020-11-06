@@ -26,8 +26,15 @@ public class ProjectileController : MonoBehaviour
 
     private void Move()
     {
-        Vector2 newPos = Vector2.MoveTowards(transform.position, target.transform.position, flightSpeed * Time.deltaTime);
-        rb2d.MovePosition(newPos);
+        if (target != null)
+        {
+            Vector2 newPos = Vector2.MoveTowards(transform.position, target.transform.position, flightSpeed * Time.deltaTime);
+            rb2d.MovePosition(newPos);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     /*private void OnTriggerEnter2D(Collider2D collision)
