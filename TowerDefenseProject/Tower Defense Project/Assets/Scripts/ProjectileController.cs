@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileController : MonoBehaviour
 {
-    private int damage = 2;
+    public int damage = 2;
     public float flightSpeed = 20.0f;
     public GameObject target;
     private Rigidbody2D rb2d;

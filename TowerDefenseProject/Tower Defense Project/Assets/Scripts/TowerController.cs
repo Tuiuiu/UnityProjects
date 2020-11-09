@@ -5,25 +5,41 @@ using UnityEngine;
 public class TowerController : MonoBehaviour
 {
     public GameObject projectilePrefab;
-    //public GameObject enemies;
+    public float fireRate;
+    private float cooldown;
 
     protected List<GameObject> targets = new List<GameObject>();
     // Start is called before the first frame update
     protected virtual void Start()
     {
+        cooldown = 0;
         //enemies = GameObject.Find("EnemySpawner");
-        InvokeRepeating("ShootBehaviour", 1.0f, 1f);
+        //InvokeRepeating("ShootBehaviour", 1.0f, 1f);
     }
 
     // Update is called once per frame
     protected virtual void Update()
     {
+        if (cooldown > 0)
+        {
+            cooldown -= Time.deltaTime;
+        }
+
+        if (cooldown <= 0)
+        {
+            targets.RemoveAll(item => item == null);
+            if (targets.Count > 0)
+            {
+                ShootBehaviour();
+            }
+        }
         //Instantiate()
     }
 
     protected virtual void ShootBehaviour()
     {
         Debug.Log("Shoot");
+        cooldown = fireRate;
     }
 
     protected void ShootTarget(GameObject target)
