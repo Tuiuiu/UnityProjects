@@ -38,7 +38,7 @@ public class TowerController : MonoBehaviour
 
     protected virtual void ShootBehaviour()
     {
-        Debug.Log("Shoot");
+        //Debug.Log("Shoot");
         cooldown = fireRate;
     }
 
