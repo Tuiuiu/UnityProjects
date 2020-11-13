@@ -8,12 +8,11 @@ public class TowerBuilderController : MonoBehaviour
     private GameObject selectedTower;
     private GameObject buildProjector;
     private bool isBuilding = false;
-    private bool overTower = false;
+    private bool validTile = true;
     private SpriteRenderer buildingSR;
 
     private Ray mouseRay;
     private RaycastHit2D hitObj;
-    private int builtTowersMask = 1 << 8;
     // Start is called before the first frame update
     void Start()
     {
@@ -66,14 +65,14 @@ public class TowerBuilderController : MonoBehaviour
         {
             if (isBuilding)
             {
-                if (!overTower)
+                if (validTile)
                 {
                     Vector3 position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     position.z = 0;
                     position = SnapToGrid(position);
                     Instantiate(selectedTower, position, selectedTower.transform.rotation, transform);
                     isBuilding = false;
-                    overTower = false;
+                    validTile = true;
                     buildingSR.enabled = false;
                 }
             }
@@ -98,30 +97,50 @@ public class TowerBuilderController : MonoBehaviour
 
     private void checkRay(Ray ray, RaycastHit2D hit)
     {
-        // Raycast, looking for any collider in Layer 8
-        hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, builtTowersMask);
-
-        // If no colliders were hit
+        // Mask to capture Built Towers colliders
+        int builtTowersMask = 1 << 8;
+        // Mask to capture Buildable Tiles colliders
+        int buildTerrainMask = 1 << 9;
+        
+        // Check if it's a viable terrain
+        hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, buildTerrainMask);
+        // If it does not hit a terrain collider
         if (hit.collider == null)
         {
-            //Debug.Log("NAO BATEU");
-            if (overTower)
+            if (validTile)
             {
-                overTower = false;
-                Color spriteColor = Color.green;
+                validTile = false;
+                Color spriteColor = Color.red;
                 spriteColor.a = 0.8f;
                 buildingSR.color = spriteColor;
             }
         }
-        // If hit at least one collider
+        // If it's a buildable terrain
         else
         {
-            if (!overTower)
+            // Raycast, looking if this tile already have a tower built
+            hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity, builtTowersMask);
+            // If it's an empty tile, then a tower can be placed here
+            if (hit.collider == null)
             {
-                overTower = true;
-                Color spriteColor = Color.red;
-                spriteColor.a = 0.8f;
-                buildingSR.color = spriteColor;
+                if (!validTile)
+                {
+                    validTile = true;
+                    Color spriteColor = Color.green;
+                    spriteColor.a = 0.8f;
+                    buildingSR.color = spriteColor;
+                }
+            }
+            // If there's a tower, then it's an invalid tile
+            else
+            {
+                if (validTile)
+                {
+                    validTile = false;
+                    Color spriteColor = Color.red;
+                    spriteColor.a = 0.8f;
+                    buildingSR.color = spriteColor;
+                }
             }
         }
     }
