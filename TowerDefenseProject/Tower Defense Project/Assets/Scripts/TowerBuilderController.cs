@@ -31,6 +31,7 @@ public class TowerBuilderController : MonoBehaviour
             LoadSprite();
             buildingSR.enabled = true;
             isBuilding = true;
+            Globals.state = "building";
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -38,6 +39,7 @@ public class TowerBuilderController : MonoBehaviour
             LoadSprite();
             buildingSR.enabled = true;
             isBuilding = true;
+            Globals.state = "building";
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -46,6 +48,7 @@ public class TowerBuilderController : MonoBehaviour
             {
                 buildingSR.enabled = false;
                 isBuilding = false;
+                Globals.state = "idle";
             }
         }
 
@@ -72,6 +75,7 @@ public class TowerBuilderController : MonoBehaviour
                     position = SnapToGrid(position);
                     Instantiate(selectedTower, position, selectedTower.transform.rotation, transform);
                     isBuilding = false;
+                    Globals.state = "idle";
                     validTile = true;
                     buildingSR.enabled = false;
                 }
