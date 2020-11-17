@@ -5,6 +5,7 @@ using UnityEngine;
 public class TowerController : MonoBehaviour
 {
     public GameObject projectilePrefab;
+    private GameObject towerStructure;
     public float fireRate;
     private float cooldown;
 
@@ -13,6 +14,8 @@ public class TowerController : MonoBehaviour
     protected virtual void Start()
     {
         cooldown = 0;
+        towerStructure = transform.GetChild(0).gameObject;
+        towerStructure.GetComponent<SpriteRenderer>().enabled = false;
         //enemies = GameObject.Find("EnemySpawner");
         //InvokeRepeating("ShootBehaviour", 1.0f, 1f);
     }
@@ -65,5 +68,15 @@ public class TowerController : MonoBehaviour
         {
             targets.Remove(collision.gameObject);
         }
+    }
+
+    public void ShowSelection()
+    {
+        towerStructure.GetComponent<SpriteRenderer>().enabled = true;
+    }
+
+    public void HideSelection()
+    {
+        towerStructure.GetComponent<SpriteRenderer>().enabled = false;
     }
 }
