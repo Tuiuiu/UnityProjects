@@ -61,7 +61,7 @@ public class TowerBuilderController : MonoBehaviour
             // Updates Ray
             mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             // Check if it's hitting any tower 
-            checkRay(mouseRay, hitObj);   
+            CheckRay(mouseRay, hitObj);   
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -99,7 +99,7 @@ public class TowerBuilderController : MonoBehaviour
         return finalPos;
     }
 
-    private void checkRay(Ray ray, RaycastHit2D hit)
+    private void CheckRay(Ray ray, RaycastHit2D hit)
     {
         // Mask to capture Built Towers colliders
         int builtTowersMask = 1 << 8;
