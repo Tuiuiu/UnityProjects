@@ -10,7 +10,6 @@ public class UILevelDisplayer : MonoBehaviour
 
     private int enemiesKilled = 0;
     private float timeElapsed = 0f;
-    private int seconds;
 
     void OnEnable()
     {
@@ -47,7 +46,9 @@ public class UILevelDisplayer : MonoBehaviour
 
     void UpdateTimer()
     {
-        seconds = (int)(timeElapsed % 60);
-        levelTimer.text = Mathf.Floor(timeElapsed / 60) + ":" + seconds.ToString("d2");
+        float minutes = Mathf.FloorToInt(timeElapsed / 60);
+        float seconds = Mathf.FloorToInt(timeElapsed % 60);
+
+        levelTimer.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
