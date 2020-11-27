@@ -41,7 +41,7 @@ public class UILevelDisplayer : MonoBehaviour
     {
         enemiesKilled++;
         enemiesKilledText.text = "Inimigos Mortos: " + enemiesKilled;
-        Debug.Log("Inimigo Morto");
+        //Debug.Log("Inimigo Morto");
     }
 
     void UpdateTimer()
